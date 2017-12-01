@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+		//
 
       Call<Map<String,Map<String,Map<String,String>>>>call= RetrofitClient.getClient().create(ApiService.class).getCategoriesData();
       call.enqueue(new Callback<Map<String, Map<String, Map<String, String>>>>() {
